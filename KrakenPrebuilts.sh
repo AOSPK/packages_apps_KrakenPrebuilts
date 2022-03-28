@@ -2,7 +2,7 @@
 
 #Constants
 CUR_DIR=$(pwd)
-DOWN_PATH="$ANDROID_BUILD_TOP/packages/apps/ArrowPrebuilts"
+DOWN_PATH="$ANDROID_BUILD_TOP/packages/apps/KrakenPrebuilts"
 commit_msg=()
 
 #jq check
@@ -63,6 +63,6 @@ if [ ${#commit_msg[@]} -ne 0 ]; then
     cd $DOWN_PATH
     git add .
 
-    git commit -m "ArrowPrebuilts: Update [check description]" -m "$(echo -e ${commit_msg[*]})"
+    git commit -m "KrakenPrebuilts: Update [check description]" -m "$(echo -e ${commit_msg[*]})"
     echo "Committed locally, push to gerrit!"
 fi
